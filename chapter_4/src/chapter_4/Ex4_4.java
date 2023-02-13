@@ -4,22 +4,22 @@ import java.util.Scanner;
 
 public class Ex4_4 {
 	public static void main(String[] args) {
-		int score = 0;		//Á¡¼ö¸¦ ÀúÀåÇÏ±â À§ÇÑ º¯¼ö
-		char grade = ' ';	//ÇĞÁ¡À» ÀúÀåÇÏ±â À§ÇÑ º¯¼ö
+		int score = 0;		//ì ìˆ˜ë¥¼ ì €ì¥í•˜ê¸° ìœ„í•œ ë³€ìˆ˜
+		char grade = ' ';	//í•™ì ì„ ì €ì¥í•˜ê¸° ìœ„í•œ ë³€ìˆ˜, ê³µë°±ìœ¼ë¡œ ì´ˆê¸°í™” í•œë‹¤.
 		
-		System.out.println("Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
 		Scanner scanner = new Scanner(System.in);
-		score = scanner.nextInt();		//È­¸éÀ» À§ÇØ ÀÔ·Â¹ŞÀº ¼ıÀÚ¸¦ score¿¡ ÀúÀå
+		score = scanner.nextInt();		//í™”ë©´ì„ í†µí•´ ì…ë ¥ë°›ì€ ìˆ«ìë¥¼ scoreì— ì €ì¥
 		
-		if (score > 90) {			//score°¡ 90Á¡ º¸´Ù Å©¸é AÇĞÁ¡
+		if (score >= 90) {			//scoreê°€ 90ì  ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ìœ¼ë©´ Aí•™ì 
 			grade = 'A';
-		} else if (score >= 80) {	//score°¡ 80Á¡ º¸´Ù Å©¸é BÇĞÁ¡
+		} else if (score >= 80) {	//scoreê°€ 80ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ìœ¼ë©´ Bí•™ì 
 			grade = 'B';
-		} else if (score >= 70) {	//score°¡ 70Á¡ º¸´Ù Å©¸é CÇĞÁ¡
+		} else if (score >= 70) {	//scoreê°€ 70ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ìœ¼ë©´ Cí•™ì  
 			grade = 'C';
-		} else {					//³ª¸ÓÁö´Â DÇĞÁ¡
+		} else {					//ë‚˜ë¨¸ì§€ëŠ” Dí•™ì 
 			grade = 'D';
 		}
-		System.out.println("´ç½ÅÀÇ ÇĞÁ¡Àº " + grade + "ÇĞÁ¡ ÀÔ´Ï´Ù");
+		System.out.println("ë‹¹ì‹ ì˜ í•™ì ì€ " + grade + "ì…ë‹ˆë‹¤");
 	}
 }

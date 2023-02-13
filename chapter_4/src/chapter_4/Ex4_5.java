@@ -7,30 +7,30 @@ public class Ex4_5 {
 		int score = 0;
 		char grade = ' ', opt = '0';
 		
-		System.out.println("Á¡¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½");
 		
-		Scanner scanner = new Scanner(System.in);		//È­¸éÀ» ÅëÇØ ÀÔ·Â¹ÞÀº Á¡¼ö¸¦ score¿¡ ÀúÀå
+		Scanner scanner = new Scanner(System.in);		//í™”ë©´ì„ í†µí•´ ìž…ë ¥ë°›ì€ ì ìˆ˜ë¥¼ scoreì— ì €ìž¥
 		score = scanner.nextInt();
 		
-		System.out.printf("´ç½ÅÀÇ Á¡¼ö´Â %dÀÔ´Ï´Ù.%n", score);
+		System.out.printf("ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ %dï¿½Ô´Ï´ï¿½.%n", score);
 		
-		if(score >= 90) {		//score°¡ 90Á¡ º¸´Ù °°°Å³ª Å©¸é AÇÐÁ¡(grade)
+		if(score >= 90) {		//scoreê°€ 90ì ë³´ë‹¤ ê°™ê±°ë‚˜ í¬ë©´ Aí•™ì (grade)
 			grade = 'A';
-			if (score >= 98) {	//90Á¡ ÀÌ»ó Áß¿¡¼­µµ 98Á¡ ÀÌ»óÀº A+
+			if (score >= 98) {	//90ì  ì´ìƒ ì¤‘ì—ì„œë„ 98ì  ì´ìƒì€ A+
 				opt ='+';
-			} else if (score < 94) {	//90Á¡ ÀÌ»ó 94 ¹Ì¸¸Àº A-
+			} else if (score < 94) {	//90ì  ì´ìƒ 94ì  ë¯¸ë§Œì€ A-
 				opt = '-';
 			}
-		} else if (score >= 80) {	//score°¡ 80Á¡ º¸´Ù °°°Å³ª Å©¸é BÇÐÁ¡(grade)
+		} else if (score >= 80) {	//scoreê°€ 80ì ë³´ë‹¤ ê°™ê±°ë‚˜ í¬ë©´ Bí•™ì (grade)
 			grade = 'B';
-			if (score >= 88) {	//80Á¡ ÀÌ»ó Áß¿¡¼­µµ 88Á¡ ÀÌ»óÀº B+
+			if (score >= 88) {	
 				opt = '+';
-			} else if (score < 84) {	//80Á¡ ÀÌ»ó 84Á¡ ¹Ì¸¸Àº B-
+			} else if (score < 84) {
 				opt = '-';
 			}
-		} else {				//³ª¸ÓÁö´Â CÇÐÁ¡(grade)
+		} else {				//ë‚˜ë¨¸ì§€ëŠ” Cí•™ì (grade)
 			grade = 'C';
 		}
-		System.out.printf("´ç½ÅÀÇ ÇÐÁ¡Àº %c%cÀÔ´Ï´Ù %n", grade, opt);
+		System.out.printf("ë‹¹ì‹ ì˜ í•™ì ì€ %c%cìž…ë‹ˆë‹¤.%n", grade, opt);
 	}
 }
