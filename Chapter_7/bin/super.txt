@@ -1,0 +1,27 @@
+참조변수 super
+super는 자손 클래스에서 조상 클래스로부터 상속받은 멤버를 참조하는데 사용되는 참조변수이다.
+멤버변수와 지역변수의 이름이 같을 때 this를 붙여서 구별했듯이 상속받은 멤버와 자신의 멤버와 이름이 같을 때는 super를 붙여서 구별할 수 있다.
+
+super() - 조상의 생성자
+this()처럼 super()도 생성자이다. this()는 같은 클래스의 다른 생성자를 허ㅗ출하는데 사용되지만, super()는 조상의 생성자를 호출하는데 사용된다.
+
+class Point {			class Point3D extends Point {
+	int x, y;				int z;
+
+	Point(int x, int y) {			Point3D(int x , int y, int z) {
+		this.x = x;				this.x = x;		//조상의 멤버를 초기화
+		this.y = y;			thix.y = y;	//조상의 멤버를 초기화
+						this.z = z;
+	}
+}
+
+위의 코드에서는 Point3D클래스의 생성자가 조상인 Point클래스로부터 상속받은 x,y를 초기화한다.
+틀린 코드는 아니지만, 생성자 Point3D()를 아래처럼 조상의 멤버는 조상의 생성자를 통해 초기화되도록 작성하는 것이 바람직하다.
+
+Point3D(int x, int y, int z) {
+	super(x, y);	//조상클래스의 생성자 Point(int x, int y)를 호출
+	this.z = z;		//자신의 멤버를 초기화
+}
+
+이처러 클래스 자신에 선언된 변수는 자신의 생성자가 초기화를 책임지도록 작성하느 것이 좋다.
+참고로 생성자는 상속되지 않는다.
